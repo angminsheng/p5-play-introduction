@@ -205,6 +205,13 @@ Take a look at the simple diagram below:
 
 ![image](https://res.cloudinary.com/dvaul5gwx/image/upload/v1566489772/Screenshot_2019-08-22_at_6.02.29_PM.png)
 
+Whenever we are moving in a direction, we need to translate the movement into the displacement of the x and y axis.
+The y axis is negative as the (0,0) position of the canvas is on the top left and not bottom left.
+
+
+
+
+
 
 
 
