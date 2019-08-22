@@ -111,6 +111,48 @@ class Player {
 
 The ``createSprite(x, y, width, height)`` function from p5.play will take in 4 parameter. Attention, the width and height here is not the width and height of the loaded sprite image. It is the width and height of the placeholder rectangle if an image is not provided. For more infomation, look into the official documentation of p5.play [here](https://molleindustria.github.io/p5.play/docs/classes/p5.play.html#method_createSprite).
 
+We can now create an instance of the Player object with the constructor inside the Game class like this:
+
+```js
+// Game.js
+
+class Game {
+  constructor() {
+    this.player = new Player(WIDTH / 2, HEIGHT / 2);
+  }
+
+  setup() {
+    this.player.setup();
+  }
+
+  draw() {
+
+  }
+}
+```
+
+Lastly, all we need to do now is to call the ``drawSprite`` function which draws all the sprites in the sketch if no parameter is given.
+
+```js
+// main.js
+
+function setup() {
+  createCanvas(800, 800);
+}
+
+function draw() {
+background(0)
+drawSprite()
+}
+```
+
+And now, you should be able to see your first sprite image on the canvas!
+
+![Image of canvas](https://res.cloudinary.com/dvaul5gwx/image/upload/v1566483407/Screenshot_2019-08-22_at_4.10.49_PM.png)
+
+
+
+
 
 
 
