@@ -203,7 +203,7 @@ class Player {
 
 Take a look at the simple diagram below:
 
-
+![image](https://res.cloudinary.com/dvaul5gwx/image/upload/v1566489772/Screenshot_2019-08-22_at_6.02.29_PM.png)
 
 
 
