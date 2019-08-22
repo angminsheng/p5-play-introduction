@@ -159,6 +159,51 @@ And now, you should be able to see your first sprite image on the canvas!
 
 ![Image of canvas](https://res.cloudinary.com/dvaul5gwx/image/upload/v1566483407/Screenshot_2019-08-22_at_4.10.49_PM.png)
 
+## Iteration 4 - Driving our new car around!
+
+Now that we have a new car, let's try to move it around. The ``this.x`` and ``this.y`` defined inside the constructor are only used to intialized the position of the car. If we want to move it around, we have to modify the position of the sprite instead.
+
+We can do that by changing the ``this.sprite.position.x`` and ``this.sprite.position.y`` of the object.
+
+Our Player class will look like this at the end:
+
+```js
+class Player {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.velocity = 3;
+  }
+
+  setup() {
+    this.sprite = createSprite(this.x, this.y, 30, 30);
+    this.sprite.addAnimation("drive", playerAnimation);
+    this.sprite.scale = 0.5;
+  }
+
+  draw() {
+    this.keyIsDown();
+  }
+
+  keyIsDown() {
+    if (keyIsDown(37)) {
+      this.sprite.rotation -= 3;
+    }
+    if (keyIsDown(39)) {
+      this.sprite.rotation += 3;
+    }
+    if (keyIsDown(38)) {
+      this.sprite.position.x += sin(this.sprite.rotation) * this.velocity;
+      this.sprite.position.y -= cos(this.sprite.rotation) * this.velocity;
+    }
+  }
+}
+```
+``this.sprite.rotation`` controls the angle of the sprite image. The tricky part here is trying to move the car in the direction we are facing.
+
+Take a look at the simple diagram below:
+
+
 
 
 
