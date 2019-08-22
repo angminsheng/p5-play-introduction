@@ -38,12 +38,21 @@ We start by creating a ``main.js`` file inside the ``js`` folder. In this file, 
 // main.js
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(WIDTH, HEIGHT);
 }
 
 function draw() {
 background(0)
 }
+```
+
+Now we will create a new file ``const.js`` inside our ``js`` folder that will store all our constant variable in the project.
+
+```js
+// const.js
+
+const WIDTH = 800
+const HEIGHT = 800
 ```
 
 Don't forget to link all your javascript file in your ``index.html``.
@@ -91,7 +100,7 @@ function preload() {
   );
 }
 ```
-Now our Player class will look something like this
+And our Player class will like this:
 
 ```js
 class Player {
