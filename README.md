@@ -77,8 +77,10 @@ p5 offers a good way to preload our assests where we can simply call the ``prelo
 Since this file might get bigger later on as we have more and more assests, let's create a new file ``preload.js`` inside our ``js`` folder where we handle all our preload.
 
 ```js
+// preload.js
+
 // the variable are declared globally so they can be accessed by the classes that needed them.
-let playerSprite;
+
 let playerAnimation;
 
 function preload() {
@@ -89,6 +91,27 @@ function preload() {
   );
 }
 ```
+Now our Player class will look something like this
+
+```js
+class Player {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.velocity = 3;
+  }
+
+  setup() {
+    this.sprite = createSprite(this.x, this.y, 30, 30);
+    this.sprite.addAnimation("drive", playerAnimation);
+    this.sprite.scale = 0.5;
+  }
+  }
+```
+
+The ``createSprite(x, y, width, height)`` function from p5.play will take in 4 parameter. Attention, the width and height here is not the width and height of the loaded sprite image. It is the width and height of the placeholder rectangle if an image is not provided. For more infomation, look into the official documentation of p5.play [here](https://molleindustria.github.io/p5.play/docs/classes/p5.play.html#method_createSprite).
+
+
 
 
 
