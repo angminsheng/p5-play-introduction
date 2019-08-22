@@ -20,7 +20,7 @@ To start coding along with the lab. Head over to [this repository](www.google.de
 
 Let's start with structuring our folder.
 
-```js
+```
 |-assets
 |-js
 |-p5
@@ -29,7 +29,47 @@ README.md
 ```
 
 The ``p5`` folder contains all javascripts for the p5 library as well as the addon libraries like p5.play and p5.sound.
+
 The ``js`` folder is the folder where we will be working on.
+
+We start by creating a ``main.js`` file inside the ``js`` folder. In this file, the main function from p5 library will be called. 
+
+``js
+// main.js
+
+function setup() {
+  createCanvas(800, 800);
+}
+
+function draw() {
+background(0)
+}
+``
+
+Don't forget to link all your javascript file in your ``index.html``.
+
+## Iteration 2 - Creating our Game class.
+Inside the ``js`` folder, create a ``Game.js`` where we will create our Game class.
+This Game class will be the main class that will contain all the other classes we need later on.
+For the moment let's just keep it simple.
+
+```js
+class Game {
+  constructor() {
+   
+  }
+
+  setup() {
+ 
+  }
+
+  draw() {
+
+  }
+}
+```
+
+
 
 
 
