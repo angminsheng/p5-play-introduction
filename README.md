@@ -79,11 +79,11 @@ class Game {
 Let's create a new file ``Player.js`` inside our ``js`` folder. In this file we will be declaring our Player class, which will be a police car where we can move around with. The player will be a sprite image created using the p5.play library. 
 An image sprite is a collection of images put into a single image. However, it is also possible to use multiple image to create a sprite sheet. In our example today, we will be using a sprite sheet that is created from 3 images.
 
-In order to increase the performance of our game, it is always a good idea to first preload all the assests like the images and audio files that we will be using in our project.
+In order to increase the performance of our game, it is always a good idea to first preload all the assets like the images and audio files that we will be using in our project.
 
-p5 offers a good way to preload our assests where we can simply call the ``preload`` function predefined by the p5 library.
+p5 offers a good way to preload our assets where we can simply call the ``preload`` function predefined by the p5 library.
 
-Since this file might get bigger later on as we have more and more assests, let's create a new file ``preload.js`` inside our ``js`` folder where we handle all our preload.
+Since this file might get bigger later on as we have more and more assets, let's create a new file ``preload.js`` inside our ``js`` folder where we handle all our preload.
 
 ```js
 // preload.js
